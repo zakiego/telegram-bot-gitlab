@@ -1,5 +1,7 @@
 # Telegram Bot for Gitlab Webhook
 
+![telegram-preview](https://user-images.githubusercontent.com/78015359/195029039-db35bf7f-df6d-4006-b619-386c419a90ff.png)
+
 > **Note**
 >
 > This project is still in development. Just relax 🙂
