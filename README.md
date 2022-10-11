@@ -1,4 +1,4 @@
-# Telegram Bot for Gitlab Webhook
+# Telegram Bot for Gitlab Webhook 🦉
 
 ![telegram-preview](https://user-images.githubusercontent.com/78015359/195029039-db35bf7f-df6d-4006-b619-386c419a90ff.png)
 
