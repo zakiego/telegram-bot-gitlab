@@ -1,37 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { gitlabCommitUrl } from "../gitlab-url";
-import { botSendMessage } from "../telegram";
-
-export const PushEvent = async (data: any) => {
-  const { user_name, project, commits, checkout_sha } = data as PushEventType;
-
-  const messageText = ` 📦 ${user_name} [pushed](${gitlabCommitUrl(
-    project.web_url,
-    checkout_sha,
-  )}) to [${project.path_with_namespace}](${project.web_url}):
-  
-${CommitsParser(commits)}`;
-
-  await botSendMessage(messageText);
-};
-
-const CommitsParser = (commits: Commit[]) => {
-  let commitText = "";
-
-  commits.map((commit, index) => {
-    const { url, author, title } = commit;
-
-    commitText =
-      commitText + `*${author.name.toLocaleLowerCase()}:* [${title}](${url})`;
-
-    if (index !== commits.length - 1) {
-      commitText = commitText + "\n";
-    }
-  });
-
-  return commitText;
-};
-
 export interface PushEventType {
   object_kind: string;
   event_name: string;
