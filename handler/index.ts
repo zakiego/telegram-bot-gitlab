@@ -3,7 +3,7 @@ import { NoteEvent } from "./note";
 import { PushEvent } from "./push";
 import { UnknownEvent } from "./unknown";
 
-export const GitlabHandler = async (data: Record<string, unknown>) => {
+const GitlabHandler = async (data: Record<string, unknown>) => {
   const { object_kind } = data as { object_kind: EventEnum };
 
   switch (object_kind) {
@@ -23,3 +23,5 @@ export const GitlabHandler = async (data: Record<string, unknown>) => {
 };
 
 type EventEnum = "push" | "issue" | "note";
+
+export default GitlabHandler;
