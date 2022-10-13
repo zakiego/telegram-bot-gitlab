@@ -13,7 +13,7 @@ export const NoteEvent = async (data: any) => {
 
   const author = await getGitlabUser(object_attributes.author_id);
 
-  const messageText = `💬 *${author.name}* commented on ${noteEvent.type} [${noteEvent.title}](${object_attributes?.url}) at [${project.path_with_namespace}](${project.web_url})
+  const messageText = `💬 *${author.name}* commented on the ${noteEvent.type} [${noteEvent.title}](${object_attributes?.url}) at [${project.path_with_namespace}](${project.web_url})
 
 “${object_attributes.note}”`;
 
