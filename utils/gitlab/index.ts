@@ -1,4 +1,3 @@
-import { saveJson } from "../file";
 import { IssueEvent } from "./issue";
 import { NoteEvent } from "./note";
 import { PushEvent } from "./push";
