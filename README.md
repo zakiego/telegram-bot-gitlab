@@ -12,10 +12,10 @@ This is a bot for Telegram that can be used to receive [webhook](https://docs.gi
 
 The bot supports the following [webhook events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#push-events):
 
-- [x] [Push event](/utils/gitlab/push.ts)
+- [x] [Push event](/handler/push/)
 - [ ] Tag event
 - [ ] Issue event
-- [ ] Comment event
+- [x] [Comment event](/handler/note/)
 - [ ] Merge request event
 - [ ] Wiki page event
 - [ ] Pipeline event
