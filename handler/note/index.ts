@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+// https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#comment-events
+
 import { has } from "lodash";
 
 import { getGitlabUser } from "~/utils/gitlab-api";

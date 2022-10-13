@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+// https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#push-events
+
 import { botSendMessage } from "~/utils/telegram";
 
 import { Commit, Project, PushEventType } from "./types";
