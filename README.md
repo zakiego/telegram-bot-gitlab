@@ -14,7 +14,7 @@ The bot supports the following [webhook events](https://docs.gitlab.com/ee/user/
 
 - [x] [Push event](/handler/push/)
 - [ ] Tag event
-- [ ] Issue event
+- [x] [Issue event](/handler/issue/)
 - [x] [Comment event](/handler/note/)
 - [ ] Merge request event
 - [ ] Wiki page event
