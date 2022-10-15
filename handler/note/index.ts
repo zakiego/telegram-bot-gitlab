@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 // https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#comment-events
 
 import { has } from "lodash";
@@ -8,7 +7,7 @@ import { botSendMessage } from "~/utils/telegram";
 
 import { NoteEventType } from "./types";
 
-export const NoteEvent = async (data: any) => {
+export const NoteEvent = async (data: unknown) => {
   const { object_attributes, project } = data as NoteEventType;
 
   const noteEvent = noteEventChecker(data as NoteEventType);
