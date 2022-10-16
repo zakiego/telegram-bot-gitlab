@@ -8,7 +8,7 @@ import { Commit, Project, PushEventType } from "./types";
 export const PushEvent = async (data: any) => {
   const { user_name, commits } = data as PushEventType;
 
-  const messageText = ` 📦 ${user_name} pushed to ${getBranchDisplay(data)}:
+  const messageText = ` 📦 ${user_name} pushed to ${getBranchDisplay(data)}
 
 ${CommitsParser(commits)}`;
 
@@ -21,7 +21,7 @@ const getBranchDisplay = (data: PushEventType) => {
   const branchPath = project.path_with_namespace + "/" + branchName;
   const branchUrl = getBranchUrl(project, branchName);
 
-  return `[${branchPath}](${branchUrl})`;
+  return `<a href="${branchUrl}">${branchPath}</a>`;
 };
 
 const getBranchUrl = (project: Project, branchName: string) => {
@@ -40,7 +40,8 @@ const CommitsParser = (commits: Commit[]) => {
     const { url, author, title } = commit;
 
     commitText =
-      commitText + `*${author.name.toLocaleLowerCase()}:* [${title}](${url})`;
+      commitText +
+      `<b>${author.name.toLocaleLowerCase()}:</b> <a href="${url}">${title}</a>`;
 
     if (index !== commits.length - 1) {
       commitText = commitText + "\n";

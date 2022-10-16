@@ -11,11 +11,11 @@ export const PipelineEvent = async (data: unknown) => {
     commit,
   } = data as PipelineEventType;
 
-  const projectUrlText = `[${project.path_with_namespace}](${project.web_url})`;
+  const projectUrlText = `<a href="${project.web_url}">${project.path_with_namespace}</a>`;
 
   const pipelineUrlText = `${createPipelineUrl(project, id)}`;
 
-  const messageText = `⚙️ Pipeline [${commit.title}](${pipelineUrlText}) is *${detailed_status}* at ${projectUrlText} `;
+  const messageText = `⚙️ Pipeline <a href="${pipelineUrlText}">${commit.title}</a> is <b>${detailed_status}</b> at ${projectUrlText}`;
 
   await botSendMessage(messageText);
 };

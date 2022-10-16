@@ -16,11 +16,11 @@ export const IssueEvent = async (data: unknown) => {
   const descriptionText =
     object_attributes.description && `\n\n“${object_attributes.description}”`;
 
-  const projectUrlText = `[${project.path_with_namespace}](${project.web_url})`;
+  const projectUrlText = `<a href="${project.web_url}">${project.path_with_namespace}</a>`;
 
-  const issueUrlText = `[${object_attributes.title}](${object_attributes.url})`;
+  const issueUrlText = `<a href="${object_attributes.url}">${object_attributes.title}</a>`;
 
-  const messageText = `📝 *${author.name}* ${object_attributes.action} the issue ${issueUrlText}${assignedToText} at ${projectUrlText}${descriptionText}`;
+  const messageText = `📝 <b>${author.name}</b> ${object_attributes.action} the issue ${issueUrlText}${assignedToText} at ${projectUrlText}${descriptionText}`;
 
   await botSendMessage(messageText);
 };
