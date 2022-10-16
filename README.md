@@ -10,7 +10,7 @@ This is a bot for Telegram that can be used to receive [webhook](https://docs.gi
 
 ## Webhook Events
 
-The bot supports the following [webhook events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#push-events):
+The bot supports the following [webhook events](https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html):
 
 - [x] [Push event](/handler/push/)
 - [ ] Tag event
