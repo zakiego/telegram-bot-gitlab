@@ -1,4 +1,5 @@
 import { IssueEvent } from "./issue";
+import { MergeRequestEvent } from "./merge-request";
 import { NoteEvent } from "./note";
 import { PipelineEvent } from "./pipeline";
 import { PushEvent } from "./push";
@@ -20,12 +21,15 @@ const GitlabHandler = async (data: Record<string, unknown>) => {
     case "pipeline":
       await PipelineEvent(data);
       break;
+    case "merge_request":
+      await MergeRequestEvent(data);
+      break;
     default:
       await UnknownEvent(data);
       break;
   }
 };
 
-type EventEnum = "push" | "issue" | "note" | "pipeline";
+type EventEnum = "push" | "issue" | "note" | "pipeline" | "merge_request";
 
 export default GitlabHandler;
