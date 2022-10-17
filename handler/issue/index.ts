@@ -1,6 +1,6 @@
 // https://docs.gitlab.com/ee/user/project/integrations/webhook_events.html#issue-events
 
-import { getGitlabUser } from "~/utils/gitlab-api";
+import { getGitlabUser } from "~/handler/gitlab-api";
 import { botSendMessage } from "~/utils/telegram";
 
 import { IssueEventType } from "./types";

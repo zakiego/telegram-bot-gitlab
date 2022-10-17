@@ -1,4 +1,4 @@
-import { getGitlabUser } from "~/utils/gitlab-api";
+import { getGitlabUser } from "~/handler/gitlab-api";
 import { botSendMessage } from "~/utils/telegram";
 
 import { MergeRequestEventType } from "./types";

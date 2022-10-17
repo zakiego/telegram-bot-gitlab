@@ -2,7 +2,7 @@
 
 import { has } from "lodash";
 
-import { getGitlabUser } from "~/utils/gitlab-api";
+import { getGitlabUser } from "~/handler/gitlab-api";
 import { botSendMessage } from "~/utils/telegram";
 
 import { NoteEventType } from "./types";
