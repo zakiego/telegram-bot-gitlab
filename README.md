@@ -33,11 +33,11 @@ The bot supports the following [webhook events](https://docs.gitlab.com/ee/user/
 ├── pages
 │   ├── api
 │   │   └── gitlab # Gitlab webhook receiver
-├── utils
-│   ├── gitlab
-│   │   ├── [event].ts # Event handler
-│   │   ├── index.ts
-│   ├── telegram.ts # Telegram bot
+├── handler
+│   ├── index.ts # Handler index
+│   ├── [event] # Event handler
+│   │   ├── index.ts # Handler
+│   │   └── types.ts # Types
 ├── .env.example # Environment variables
 ```
 
