@@ -9,7 +9,7 @@ export const MergeRequestEvent = async (data: unknown) => {
   const author = await getGitlabUser(object_attributes.author_id);
 
   const descriptionText = object_attributes.description
-    ? `\n\n${object_attributes.description}}`
+    ? `\n\n${object_attributes.description}`
     : "";
 
   const messageText = `🔀 <b>${author.name}</b> ${object_attributes.action} merge request at <a href="${project.web_url}">${project.path_with_namespace}</a>
